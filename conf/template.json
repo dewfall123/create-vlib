@@ -1,0 +1,8 @@
+{
+  "rollup": {
+    "name": "rollup做构建工具，编写组件或库",
+    "value": "rollup",
+    "git": "https://github.com/dewfall123/rollup-tpl.git",
+    "options": []
+  }
+}

@@ -1,0 +1,60 @@
+{
+    "name": "vlib-cli",
+    "version": "0.0.1",
+    "description": "vue library cli",
+    "main": "index.js",
+    "scripts": {
+        "dev": "yarn build && vlib-init math-lib",
+        "build": "rimraf dist && tsc -p src/"
+    },
+    "bin": {
+        "vlib": "bin/vlib.js",
+        "vlib-init": "bin/vlib-init.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/dewfall123/vlib-cli.git"
+    },
+    "author": "dewfall123",
+    "license": "ISC",
+    "dependencies": {
+        "chalk": "^4.1.0",
+        "commander": "^6.1.0",
+        "compare-versions": "^3.6.0",
+        "del": "^6.0.0",
+        "download-git-repo": "^3.0.2",
+        "ejs": "^2.7.4",
+        "git-clone": "^0.1.0",
+        "glob": "^7.1.6",
+        "globby": "^11.0.1",
+        "gulp": "^4.0.2",
+        "gulp-template": "^5.0.0",
+        "handlebars": "^4.7.6",
+        "inquirer": "^6.5.2",
+        "latest-version": "^5.1.0",
+        "log-symbols": "^4.0.0",
+        "metalsmith": "^2.3.0",
+        "minimatch": "^3.0.4",
+        "ora": "^5.1.0",
+        "rimraf": "^3.0.2",
+        "wrap-ansi": "^7.0.0"
+    },
+    "homepage": "https://github.com/dewfall123/vlib-cli.git",
+    "devDependencies": {
+        "@types/gulp": "^4.0.7",
+        "@types/gulp-template": "^5.0.1",
+        "@types/inquirer": "^7.3.1",
+        "@types/node": "^14.14.7",
+        "eslint": "^7.11.0",
+        "eslint-plugin-vue": "^7.0.1",
+        "prettier": "^2.1.2",
+        "typescript": "^4.0.5"
+    },
+    "keywords": [
+        "vue",
+        "lib",
+        "cli",
+        "模板",
+        "构建工具"
+    ]
+}
