@@ -9,7 +9,7 @@ export async function download(meta: Meta) {
     const item = TEMPLATES.find((i) => i.value === meta.mode)!;
     const gitUrl = item.git;
 
-    const spinner = ora(`Downloading template ${gitUrl}...`);
+    const spinner = ora(`Downloading template from ${gitUrl}...`);
 
     spinner.start();
     try {

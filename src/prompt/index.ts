@@ -16,7 +16,7 @@ export async function prompt(projectName: string) {
     const questions = [
         {
             name: 'name',
-            message: 'name',
+            message: 'project name',
             default: projectName,
         },
         {

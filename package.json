@@ -1,22 +1,21 @@
 {
-    "name": "vlib-cli",
-    "version": "0.0.1",
-    "description": "vue library cli",
-    "main": "index.js",
+    "name": "create-vlib",
+    "version": "0.1.6",
+    "description": "vitepress-document-generator cli",
+    "main": "dist/index.js",
     "scripts": {
-        "dev": "yarn build && vlib-init math-lib",
+        "dev": "yarn build && create-vlib test-project",
         "build": "rimraf dist && tsc -p src/"
     },
     "bin": {
-        "vlib": "bin/vlib.js",
-        "vlib-init": "bin/vlib-init.js"
+        "create-vlib": "bin/create-vlib.js"
     },
     "repository": {
         "type": "git",
-        "url": "https://github.com/dewfall123/vlib-cli.git"
+        "url": "https://github.com/dewfall123/vitepress-dg-cli.git"
     },
     "author": "dewfall123",
-    "license": "ISC",
+    "license": "MIT",
     "dependencies": {
         "chalk": "^4.1.0",
         "commander": "^6.1.0",
@@ -28,6 +27,7 @@
         "glob": "^7.1.6",
         "globby": "^11.0.1",
         "gulp": "^4.0.2",
+        "gulp-replace": "^1.0.0",
         "gulp-template": "^5.0.0",
         "handlebars": "^4.7.6",
         "inquirer": "^6.5.2",
@@ -37,11 +37,13 @@
         "minimatch": "^3.0.4",
         "ora": "^5.1.0",
         "rimraf": "^3.0.2",
+        "strip-ansi": "^6.0.0",
         "wrap-ansi": "^7.0.0"
     },
-    "homepage": "https://github.com/dewfall123/vlib-cli.git",
+    "homepage": "https://github.com/dewfall123/vitepress-dg-cli.git",
     "devDependencies": {
         "@types/gulp": "^4.0.7",
+        "@types/gulp-replace": "^0.0.31",
         "@types/gulp-template": "^5.0.1",
         "@types/inquirer": "^7.3.1",
         "@types/node": "^14.14.7",
@@ -51,10 +53,12 @@
         "typescript": "^4.0.5"
     },
     "keywords": [
+        "documentation",
+        "generator",
+        "vuepress",
+        "dumi",
         "vue",
-        "lib",
-        "cli",
-        "模板",
-        "构建工具"
+        "vite",
+        "cli"
     ]
 }

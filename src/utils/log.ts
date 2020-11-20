@@ -1,17 +1,48 @@
-import logSymbols from 'log-symbols';
 import chalk from 'chalk';
+import stripAnsi from 'strip-ansi';
+
+const format = (label: string, msg: string) => {
+    return msg
+        .split('\n')
+        .map((line, i) => {
+            return i === 0
+                ? `${label} ${line}`
+                : line.padStart(stripAnsi(label).length);
+        })
+        .join('\n');
+};
+
+const chalkTag = (msg: string) => chalk.bgBlackBright.white.dim(` ${msg} `);
 
 export const log = {
-    info: (...str: any) => {
-        console.log(logSymbols.info, chalk.blue(...str));
+    info: (msg: string, tag?: string) => {
+        console.log(
+            format(
+                chalk.bgBlue.black(' INFO ') + (tag ? chalkTag(tag) : ''),
+                msg,
+            ),
+        );
     },
-    succes: (...str: any) => {
-        console.log(logSymbols.success, chalk.green(...str));
+    succes: (msg: string, tag?: string) => {
+        console.log(
+            format(
+                chalk.bgGreen.black(' DONE ') + (tag ? chalkTag(tag) : ''),
+                msg,
+            ),
+        );
     },
-    warn: (...str: any) => {
-        console.log(logSymbols.warning, chalk.yellow(...str));
+    warn: (msg: string, tag?: string) => {
+        format(
+            chalk.bgYellow.black(' WARN ') + (tag ? chalkTag(tag) : ''),
+            chalk.yellow(msg),
+        );
     },
-    error: (...str: any) => {
-        console.log(logSymbols.error, chalk.red(...str));
+    error: (msg: string, tag?: string) => {
+        console.error(
+            format(
+                chalk.bgRed(' ERROR ') + (tag ? chalkTag(tag) : ''),
+                chalk.red(msg),
+            ),
+        );
     },
 };
