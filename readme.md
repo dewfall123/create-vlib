@@ -1,6 +1,6 @@
 # create-vlib
 
-[Vitepress-dg](https://github.com/dewfall123/vitepress-dg)'s cli that help you tdevelop libraries & write docs.
+[Vitepress-dg](https://github.com/dewfall123/vitepress-dg)'s cli that help you to develop libraries & write docs.
 
 ## Features
 

@@ -8,6 +8,7 @@ export async function generator(meta: Meta) {
         src(['./temp/**/**'], { dot: true })
             .pipe(replace('vlibTemplate', meta.name))
             .pipe(replace('_description', meta.description))
+            .pipe(replace('_user', meta.user))
             .pipe(dest(meta.name))
             .on('error', (err) => {
                 reject(err);
