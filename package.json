@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "yarn build && create-vlib test-project",
     "build": "rimraf dist && tsc -p src/",
-    "release": "np"
+    "release": "yarn build && np"
   },
   "bin": {
     "create-vlib": "bin/create-vlib.js"
