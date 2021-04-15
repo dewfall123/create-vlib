@@ -11,6 +11,10 @@
   "bin": {
     "create-vlib": "bin/create-vlib.js"
   },
+  "files": [
+    "dist",
+    "bin"
+  ],
   "repository": {
     "type": "git",
     "url": "https://github.com/dewfall123/vitepress-dg-cli.git"
