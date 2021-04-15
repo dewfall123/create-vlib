@@ -1,6 +1,6 @@
 {
   "name": "create-vlib",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "vitepress-document-generator cli",
   "main": "dist/index.js",
   "scripts": {
