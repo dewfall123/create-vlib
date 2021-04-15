@@ -33,7 +33,7 @@ export async function cli() {
         console.log(`👉  Get started with the following commands:\n`);
 
         console.log(`${chalk.gray('$')} ${chalk.cyan(`cd ${meta.name}`)}`);
-        console.log(`${chalk.gray('$')} ${chalk.cyan('yarn dev')}\n`);
+        console.log(`${chalk.gray('$')} ${chalk.cyan('yarn && yarn dev')}\n`);
     } catch (err) {
         log.error(err);
         log.warn(`[${CLI_NAME}] failed.`);
