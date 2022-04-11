@@ -1,12 +1,13 @@
 {
   "name": "create-vlib",
-  "version": "1.0.2",
+  "version": "1.0.4",
   "description": "vitepress-document-generator cli",
   "main": "dist/index.js",
   "scripts": {
     "dev": "yarn build && create-vlib test-project",
     "build": "rimraf dist && tsc -p src/",
-    "release": "yarn build && np"
+    "release": "yarn build && np",
+    "test": "create-vlib"
   },
   "bin": {
     "create-vlib": "bin/create-vlib.js"
